@@ -8,11 +8,21 @@
 */
 
 // тестовые данные (значения можно менять)
-const isAdmin = false
-const isVerifiedUser = true
-const hasSpecialPermission = true
-const hasTemporaryPass = false
+const isAdmin = false;
+const isVerifiedUser = truefalse;
+const hasSpecialPermission = truefalse;
+const hasTemporaryPass = false;
 
-let isAccess
+let isAccess;
+
 
 // your code
+if ((isAdmin || isVerifiedUser) && (hasSpecialPermission || hasTemporaryPass)) {
+    isAccess = true;
+    if (isAccess === true) {
+        console.log("The entrance is completed");
+    }
+} else {
+    isAccess = false;
+    console.log("You don't have access to this page");
+}
