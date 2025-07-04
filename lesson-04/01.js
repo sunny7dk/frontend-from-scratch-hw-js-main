@@ -13,10 +13,10 @@
 includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
-const number = [1, 2, 3];
+const number = [20, 21, 22, 23];
 
 function includesElement(array, accordanceValueToArray) {
-    let index;
+    let index = false;
     for (let i = 0; i < array.length; i++) {
         if (array[i] === accordanceValueToArray) {
             index = true;
@@ -25,5 +25,5 @@ function includesElement(array, accordanceValueToArray) {
     return index;
 }
 
-const result = includesElement(number, 2);
+const result = includesElement(number, 25);
 console.log(result);
