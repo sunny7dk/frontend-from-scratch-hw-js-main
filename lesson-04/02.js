@@ -15,4 +15,19 @@
 Подсказка: можно использовать функцию `includesElement`, которую мы написали ранее. Переписывать её не нужно, она доступна по всему проекту за счёт hoisting.
 */
 
-function findUniqueElements() {}
+const number = [30, 31, 32, 32, 33, 34, 33];
+
+function findUniqueElements(array) {
+    let elements = 0;
+    const uniqueElements = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > elements ) {
+            elements = array[i];
+            uniqueElements.push(i);
+        }
+    }
+    return uniqueElements;
+}
+
+const result = findUniqueElements(number);
+console.log(result);
