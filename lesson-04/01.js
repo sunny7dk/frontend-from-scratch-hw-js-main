@@ -19,7 +19,7 @@ function includesElement(array, accordanceValueToArray) {
     let index;
     for (let i = 0; i < array.length; i++) {
         if (array[i] === accordanceValueToArray) {
-            index = "There is a match in the: " + i + "rd " + " index";
+            index = true;
         }
     }
     return index;
