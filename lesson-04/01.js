@@ -13,4 +13,17 @@
 includesElement([1, 2, 3], 2)  // должен вернуть `true`.
 */
 
-function includesElement() {}
+const number = [20, 21, 22, 23];
+
+function includesElement(array, accordanceValueToArray) {
+    let index;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === accordanceValueToArray) {
+            index = "There is a match in the: " + i + "rd " + " index";
+        }
+    }
+    return index;
+}
+
+const result = includesElement(number, 23);
+console.log(result);
