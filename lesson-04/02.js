@@ -17,13 +17,14 @@
 
 const number = [30, 31, 32, 32, 33, 34, 33];
 
+
 function findUniqueElements(array) {
-    let elements = 0;
+    let startValue = 0
     const uniqueElements = [];
     for (let i = 0; i < array.length; i++) {
-        if (array[i] > elements ) {
-            elements = array[i];
-            uniqueElements.push(i);
+        if (array[i] > startValue) {
+            startValue = array[i];
+            uniqueElements.push(array[i]);
         }
     }
     return uniqueElements;
