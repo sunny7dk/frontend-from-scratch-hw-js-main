@@ -18,12 +18,20 @@
 const number = [30, 31, 32, 32, 33, 34, 33];
 
 
+function includesElement(array, accordanceValueToArray) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === accordanceValueToArray) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 function findUniqueElements(array) {
-    let startValue = 0
     const uniqueElements = [];
     for (let i = 0; i < array.length; i++) {
-        if (array[i] > startValue) {
-            startValue = array[i];
+        if (!includesElement(uniqueElements, array[i])) {
             uniqueElements.push(array[i]);
         }
     }
