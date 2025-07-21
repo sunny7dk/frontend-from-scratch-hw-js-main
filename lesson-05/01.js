@@ -17,7 +17,7 @@ const game = {
   },
   addResource(resource, amount) {
     if ((typeof resource === "string") && (typeof amount === "number" && !isNaN(amount))) {
-      if (resource in this.resources) {
+      if (Object.hasOwn(game.resources, resource)) {
         game.resources[resource] += amount;
       } else {
         console.log("Invalid resource")
@@ -26,5 +26,5 @@ const game = {
   },
 }
 
-game.addResource("lumber", 100);
+game.addResource("gold", 100);
 console.log(game)
