@@ -37,8 +37,12 @@ const gallery = {
 
 function updateGallery(obj, keyObj, valueObj) {
   if (typeof keyObj === "string" && typeof valueObj === "string") {
-    obj[keyObj] = valueObj;
+    if (Object.hasOwn(obj, keyObj)) {
+      obj[keyObj] = valueObj;
+      return obj;
+    }
   }
+  obj[keyObj] = valueObj;
   return obj;
 }
 
